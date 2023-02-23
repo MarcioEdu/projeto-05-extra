@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --fs-heading: clamp(4rem, 1rem + 5vw, 5rem );
+    --fs-title: clamp(2rem, 1rem + 3vw, 3rem);
+
+    --bs-primary: hsl(218, 17%, 62%);
+    --bs-title: hsl(274, 84%, 12%);
+
+}
+
+body {
+    font-family: 'Palanquin', sans-serif;
+    background: #EFF1FF;
+}
+
+.page {
+    width: 38.4rem;
+    margin: 0 auto;
+
+}
+
+header {
+    background: var(--bs-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 3.2rem;
+
+}
+
+header img {
+    margin-bottom: 3.2rem;
+}
+
+.title {
+    width: 38.4rem;
+    display: flex;
+    justify-content: center;
+
+    background: #CBC0D3;
+    margin-bottom: 2.9rem;
+}
+
+h1 {
+    font-family: 'Staatliches', cursive;
+    font-weight: 400;
+    font-size: var(--fs-heading);
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    
+    padding: 8px;
+
+    color: #FFFFFF; 
+}
+
+.sub-title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 30.5rem;
+    margin-top: 3rem;
+    padding-bottom: 6.3rem;
+}
+
+.sub-title p {
+    font-weight: 400;
+    font-size: var(--fs-title);
+    line-height: 1.5rem;
+    text-align: center;
+
+    color: var(--bs-title);
+}
+
+main {
+    width: 32rem;
+    margin: 0 auto;
+
+}
+
+.container {
+    width: 32rem;
+    display: flex;
+    flex-direction: column;
+
+    gap: 3.6rem;
+    margin: 0 auto;
+
+    animation: topdown 1000ms 200ms backwards;
+}
+
+.card img {
+    height: fit-content;
+    width: 32rem;
+
+    border-radius: 2rem;
+}
+
+.card {
+    display: grid;
+    position: relative;
+    
+}
+
+.card h2 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+}
+
+.card h2 span {
+    background: #FEEAFA;
+    
+    border-radius: 20px;
+    font-family: 'Staatliches';
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    
+    padding: 4px 2.4rem;
+    height: 3.5rem;
+
+    color: #4A4E69;
+    transition: all 200ms;
+
+    animation: downtop 1000ms 400ms backwards;
+}
+
+.card h2 span:hover {
+    transform: scale(1.2);
+    opacity: 0.6;
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
